@@ -1,0 +1,43 @@
+PROGRAM:-
+	This is a python program,where collection of integers in a list.
+finding an smallest integer in a list that should be repeated k number 
+of times.
+
+DESCRIPTION:-
+*Take a size of a list	.
+*Append integer values to a list.
+*Count the smallest integer that is repeated k times.
+	[2,2,1,1,4,4,4,5,5]
+     if  k=2        prints(1)
+     if  k=3        prints(4)
+
+PROGRAM:-
+num=int(input('enter number of elements in a list'))
+l=[]
+for i in range(0,num):
+	l.append(int(input(f'enter l[{i}] element:-')))
+k1=int(input('how many repeatings should occur:-'))
+num=[]
+for j in l:
+	k=l.count(j)
+	if k==k1:
+		num.append(j)
+print('repeated smallest element :-',format(min(num)))
+
+INPUT:-
+enter number of elements in a list:5
+enter l[0] element:-4
+enter l[1] elemnet:-3
+enter l[2] element:-4
+enter l[3] element:-3
+enter l[4] element:-5
+how many repeatings should occur:-2
+OUTPUT:-
+repeated smallest element :-3
+
+INPUT EXPLANATION:-
+*first line of input contains single value 'N' size of the list.
+*second line contains 'N' integer in a list.
+*third line contains 'k' times should be repeated.
+OUTPUT EXPLANATION:-
+*smallest integer value in a list that is repeated exactly k times.

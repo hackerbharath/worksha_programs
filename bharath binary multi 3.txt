@@ -1,0 +1,51 @@
+PROBLEM:-
+	This is a python program where 'N' no. of binary numbers should be checked,
+whether the given binary number is a multiple of 3..
+if it is multiple of 3,then print 1's or else print 0's....
+
+DESCRIPTION:-
+	let us take 'N' no of testcases for the program.
+*Entering input a binary number
+*Take dec as variable,while binary number tends to zero.
+*Now selecting a last digit in binary number and adding it in a dec variable as
+		dec=dec+last digit*(2^P)
+	where p=1,2,3,4......
+*Removing last digit from the binary number,repeating continously till binary tends zero.
+*Finally we get a decimal number,that should be checked whether it is multiple of 3
+		 if dec%3=0
+      if it is true,print (1) or else print(0)
+
+PROGRAM:-
+n=int(input('no.of required binary numbers:'))
+while(n):
+	n-=1
+	b=int(input('binary number:'))
+	dec=0
+	p=0
+	while b!=0:
+		d=b%10
+		dec=dec+d*(2**p)
+		b=b//10
+		p+=1
+	print('decimal:',dec)
+	if dec%3==0:
+		print(1)
+	else:
+		print(0)
+
+INPUT:-
+no. of required binary numbers:2
+binary number:1011
+binary number:100
+OUTPUT:-
+decimal:11
+0
+decimal:9
+1
+
+INPUT EXPLANATION:-
+*first line of input contains an integer 'N',no.of required binary numbers.
+*second line is a input of binary number.
+OUTPUT EXPLANATION:-
+*binary number is converted in to decimal number and if it is multiple of 3,prints (1) 
+or else prints(0)	
