@@ -41,3 +41,6 @@ INPUT EXPLANATION:-
 *third line contains 'k' times should be repeated.
 OUTPUT EXPLANATION:-
 *smallest integer value in a list that is repeated exactly k times.
+
+TIME COMPLEXITY:-
+Time complexity of this program is in the order of O(len(l))
