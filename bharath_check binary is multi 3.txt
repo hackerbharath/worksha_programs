@@ -48,4 +48,7 @@ INPUT EXPLANATION:-
 *second line is a input of binary number.
 OUTPUT EXPLANATION:-
 *binary number is converted in to decimal number and if it is multiple of 3,prints (1) 
-or else prints(0)	
+or else prints(0)
+
+TIME COMPLEXITY:-
+Time complexity of this program is in the order of O(len(b)).
