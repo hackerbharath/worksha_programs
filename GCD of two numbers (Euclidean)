@@ -1,0 +1,35 @@
+PROBLEM:-
+	This is a python progam.
+Finding the GCD of the two number using Euclidean method..
+
+DESCRIPTION:-
+*Take two integers numbers as input.
+*Find the larger and smaller integer in both of them.
+*Now divide larger with smaller until remainders becomes zero.
+*When remainder becomes zero ,then print smaller integer in the 
+ recursion as final anwser of GCD of the two numbers.
+
+PROGRAM:-
+n1=int(input('Enter first number:'))
+n2=int(input('Enter second number:'))
+if n1>n2:
+	l=n1
+	s=n2
+else:
+	l=n2
+	s=n1
+def gcd(l,s):
+	if l%s==0:
+		return s
+	return gcd(s,l%s)
+print(f'GCD of two numbers {n1} and{n2} is:',gcd(n1,n2))
+
+INPUT:_
+Enter first number:10
+Enter second number:15
+
+OUTPUT:-
+GCD of two numbers {10} and {15} is:5
+
+TIME COMPLEXITY:-
+Time complexity of this program GCD of two number is in the order of O(  ).
