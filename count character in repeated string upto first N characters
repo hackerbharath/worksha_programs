@@ -1,0 +1,62 @@
+PROBLEM:-
+	This is a python proram.
+A string of uppercase English letters is repeated k times
+count a specific english letter in the first N characters 
+in the final string.
+
+DESCRIPTION:-
+*Firstly no of testcases required .
+*Enter the string and repeated it k times,then the final string as
+	abdabdabdabd..........(k times)
+*Select the required character in the string.
+*Count the required character upto n characters in the final string.
+*Let suppose required character is 'b'upto 8 characters
+	abdabdab\dabdabd.......(k times)
+	n=8    count=3
+*Finally print the count of required character in the final string 
+ upto N characters....
+
+PROGRAM:-
+t=int(input('no of testcases':))
+for i in range(t):
+	s=input('Enter string:')
+	k=int(input('Repeat string k times:'))
+	char=input('select required character:')
+	N=int(input('Required first N characters :'))
+	c1=0
+	c2=0
+	c=0
+	x=N//len(s)
+	r=N%len(s)
+	for j in range(len(s)):
+		if char==s[j]:
+			c1+=1
+	c=x*c1
+	for z in range(r):
+		if char==s[z]:
+			c2+=1
+	c=c+c2
+	print('count of required character in first N characters:',int(c))
+
+INPUT:-
+no .of testcases:1
+Enter string:ABD
+Repeat string k times:4
+Select required character:B
+Required first N characters:8
+
+OUTPUT:-
+count of required character in first N characters:3
+
+INPUT EXPLANATION:-
+First line of input contains a testcases of the string.
+entering the string 
+repeating string k times
+selecting character in the orginal string
+count the character in first N characters of the final string.
+
+OUTPUT EXPLANATION:-
+print the count of the required character in first N  characters..
+
+TIME COMPLEXITY:-
+Time complexity of this program is in the order of O(len(s)).
